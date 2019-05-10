@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form action="/result" method="post" style="margin-top:10%">
+      <center>
+        <fieldset class="card border border-dark bg-dark text-white" style="width: 50%">
+          <div class="form-group">
+            <legend class="text-dark bg-warning">LOGIN</legend>
+          </div>
+          <div class="form-group">
+            <label>Username</label>
+            <input class="input" type="text" name="txtuser" required/>
+          </div>
+          <div class="form-group">
+            <label>Password</label>&nbsp
+            <input class="input" type="password" name="txtpass" required/>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-warning rounded-pill">
+              Login
+            </button>
+          </div>
+          <div id="myAlert" name="myAlert" style="display:none;" class="alert alert-warning">
+            <strong>Warning!</strong> ไม่พบผู้ใช้ในระบบ
+          </div>
+        </fieldset>
+      </center>
+    </form>
+    <script>
+      if ("<%= error %>" === "ไม่พบข้อมูล") {
+        document.getElementById("myAlert").style.display="block";
+        window.location.href = "/login"
+      }
+    </script>
+  </body>
+</html>

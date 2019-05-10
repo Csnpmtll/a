@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+        <form action="/login" method="get" style="margin-top:10%">
+    <center>
+      <fieldset
+        class="card border border-primary bg-dark text-white"
+        style="width: 25%"
+      >
+        <div class="bg-warning">
+          <legend class="text-dark">RESULT</legend>
+        </div>
+        <div>
+          <p style="float:right">User : <%= doctype %></p><br>
+          <div style="float:left"><U>ชื่อ-สกุล</U> : <%= name %> <%= surname %></div><br>
+          <div style="float:left"><U>ตำแหน่งงาน</U> : <%= doctype %></div><br>
+          <div style="float:left"><U>เงินเดือน</U> : <%= salary %></div><br>
+          <div style="float:left"><U>เงินOT</U> : <%= ot %></div><br>
+          <div style="float:left"><U>เงินโบนัส</U> : <%= bonus %></div><br>
+          <div style="float:left"><U>เงินได้สุทธิ</U> : <%= netincome %></div><br>
+        </div>
+        <button type="submit" class="btn btn-warning rounded-pill">
+                Back
+              </button>
+      </fieldset>
+    </center></form>
+  </body>
+</html>
